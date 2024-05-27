@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfofilo.css">
+    <script src="https://kit.fontawesome.com/bd1f34f51d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Izundu's Portfolio</h1>
+                <ul class="list" id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="hero-content" id="home">
+                <div class="hero-content">
+                    <p>Senior Frontend Web Developer</p>
+                    <h1>
+                       Hi, I am <span>Izundu</span><br> Victor from Nigeria
+                    </h1>
+                <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </div>
+    <!-- ...............about............. -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Snapchat-993183899.jpg" alt="" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <h2><p><b>Hi, I'm Izundu Victor Chidera, a senior frontend based in Nigeria. With a passion for Cybersecurity, I specialize in Web Development and Design, Frontend and Backend with expert knowledge in Bootstrap and Java programming.</b></p></h2>
+                <div class="tab-titles">
+                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                 <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                 <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Andriod/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2018-2019</span><br>UI/UX Design traning at Udemy</li>
+                        <li><span>2019-2020</span><br>Web App Development at Aptech LLC.</li>
+                        <li><span>2020-Current</span><br>Intership At Access-Bank Nigeria</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021</span><br>Graduated From St.Gregory's College</li>
+                        <li><span>2022</span><br>Graduated From Adams College</li>
+                        <li><span>App Development</span><br>Graduated from Advanced Frontend Certification Course from New Horizons</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------projects------------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+<div>
+    <i class="fa-solid fa-bars-progress"></i>
+    <h2>Loading Bar</h2>
+    <p>This is a loading bar which loads from 0-100%</p>
+    <a href="Loading Bar.html">View Project</a>
+</div>
+<div>
+    <i class="fa-solid fa-scale-unbalanced-flip"></i>
+    <h2>WeightConvert</h2>
+    <p>This is a Weight Converter that converts from pounds to kilograms</p>
+    <a href="weight converter.html">View Project</a></div>
+<div>    
+    <i class="fa-solid fa-stopwatch"></i>
+    <h2>Stopwatch</h2>
+    <p>This is a stopwatch that can start, stop and reset the time its recording</p>
+    <a href="stopwatch.html">View Project</a></div>
+        </div>
+    </div>
+</div>
+<!-- --------------contact------------ -->
+<div id="contact">
+    <div class="container">
+<div class="row">
+    <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-regular fa-paper-plane"></i>vizundu98@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>07061904995</p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.link/27wy3m"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://x.com/IzunduVictor"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/vic20056/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="contact-right">
+        <form action="" name="submit-to-google-sheet" id="contactForm" method="post" onsubmit="resetForm(event)">
+            <input type="text" name="Name" id="" placeholder="Your Name" required>
+            <input type="email" name="email" id="" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <!-- <span id="msg">Hello</span> -->
+    </div>
+</div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <span id="datetime"></span>
+        <span>&copy; <span id="year"></span>  Izundu Victor C. All Rights Reserved</span>
+    </div>
+</footer>
+    <script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <script src="portfolio.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzH7LuPyIch1jak5Lea6mMUKGAl9S-06j_l6q51g-IxVc6g7jLoUmCbOGLatGpalEYj/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+       <script>
+        function resetForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = document.getElementById('contactForm');
+            // Perform any other actions here, such as sending data via AJAX
+            form.reset(); // Reset the form
+            // Optionally, you can add code here to notify the user that the form has been submitted
+        }
+    </script>
+</body>
+</html>
